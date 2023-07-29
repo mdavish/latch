@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { signIn } from "next-auth/react";
 
 export default function Page() {
+
   return (
     <div className="w-full h-screen flex">
       <div className="mx-auto my-auto mt-40 text-center flex flex-col gap-y-4">
@@ -17,8 +19,9 @@ export default function Page() {
           Everyone&lsquo;s a critic.
         </p>
         <Button
+          onClick={() => signIn()}
           className="w-fit mx-auto">
-          Sign Up
+          Sign In
         </Button>
       </div>
     </div>
