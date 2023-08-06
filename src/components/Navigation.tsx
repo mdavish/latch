@@ -2,6 +2,7 @@ import { getServerSession } from "next-auth";
 import UserBadge from "./UserBadge";
 import Link from "next/link";
 import { FaHome, FaUserAlt, FaDraftingCompass } from "react-icons/fa";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 interface NavItem {
   name: string;
@@ -28,7 +29,7 @@ const navItems: NavItem[] = [
 ];
 
 export default async function Navigation() {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
   if (!session) {
     throw new Error("No session found. This should never happen.");
