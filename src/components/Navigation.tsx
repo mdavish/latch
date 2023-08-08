@@ -36,7 +36,7 @@ export default async function Navigation() {
   }
 
   return (
-    <nav className="w-64 h-full flex flex-col border-r border-slate-100 p-4">
+    <nav className="w-72 h-full flex flex-col border-r border-slate-100 p-4">
       <div className="mt-10 flex flex-col gap-y-4">
         {navItems.map((item) => {
           return (
